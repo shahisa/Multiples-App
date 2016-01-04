@@ -20,31 +20,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="lCa-YH-inG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="p7q-Yr-bqB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="p7q-Yr-bqB">
                                 <rect key="frame" x="74" y="28" width="453" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="RJg-Us-idk"/>
                                     <constraint firstAttribute="width" constant="453" id="iwW-dj-zsm"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-aC-dC3" userLabel="Play Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-aC-dC3" userLabel="Play Button">
                                 <rect key="frame" x="164" y="324" width="272" height="268"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="DDp-Sw-5w4"/>
                                     <constraint firstAttribute="height" constant="268" id="LhN-5s-WCm"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="prsPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yv6-6k-JpW"/>
+                                </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Q-fh-GIV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Q-fh-GIV">
                                 <rect key="frame" x="164" y="249" width="267" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="267" id="gdL-bI-IGc"/>
                                     <constraint firstAttribute="height" constant="30" id="qOt-ZK-SLs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxR-2z-sD8" userLabel="Add Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxR-2z-sD8" userLabel="Add Button">
                                 <rect key="frame" x="195" y="407" width="211" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="101" id="3nU-ug-RW0"/>
@@ -52,7 +55,7 @@
                                 </constraints>
                                 <state key="normal" image="add"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvj-CW-ml9">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvj-CW-ml9">
                                 <rect key="frame" x="195" y="242" width="193" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="ClJ-Wu-ROz"/>
@@ -83,6 +86,13 @@
                             <constraint firstItem="kxR-2z-sD8" firstAttribute="centerX" secondItem="gvj-CW-ml9" secondAttribute="centerX" id="miz-yW-iL3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="kxR-2z-sD8" id="ncJ-YA-Ai1"/>
+                        <outlet property="addLbl" destination="gvj-CW-ml9" id="LqU-Ix-uQC"/>
+                        <outlet property="multImg" destination="p7q-Yr-bqB" id="TsS-0F-OIh"/>
+                        <outlet property="playButton" destination="3fa-aC-dC3" id="n6a-bw-HxR"/>
+                        <outlet property="queField" destination="Z6Q-fh-GIV" id="WAQ-zm-Nwy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

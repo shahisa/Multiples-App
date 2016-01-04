@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var multImg: UIImageView!
+    @IBOutlet weak var queField: UITextField!
+    @IBOutlet weak var addLbl: UILabel!
+    
+    @IBAction func prsPlayButton (sender:UIButton){
+    playButton.hidden = true
+    multImg.hidden = true
+    queField.hidden = true
+    
+    addLbl.hidden = false
+    addButton.hidden = false
+    
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
 }
 
+
+ 
